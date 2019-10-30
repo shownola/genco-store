@@ -22,7 +22,17 @@
 
 
 /* NAVBAR TRANSPARENT TO SOLID */
-$(document).ready(function(){
+$(document).on('tubolinks:load', function(){
+  $(window).scroll(function(){
+    if($(this).scrollTop() > 300){
+      $('.navbar').addClass('solid');
+    } else {
+      $('.navbar').removeClass('solid');
+    }
+  });
+});
+
+$(document).ready('turbolinks:load', function(){
   $(window).scroll(function(){
     if($(this).scrollTop() > 300){
       $('.navbar').addClass('solid');
@@ -45,6 +55,20 @@ $(document).ready(function(){
 })
 
 /* SMOOTH SCROLLING TO LINKS */
+
+$(document).on('turbolinks:load', function(){
+  $("a").on("click", function(event) {
+    if(this.hash !== ""){
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } // End of if statement
+  });
+})
 
 $(document).ready(function(){
   $("a").on("click", function(event) {

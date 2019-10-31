@@ -1,5 +1,12 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+$warningcolor:gold;
+.btn-warning {
+  @include button-variant($warningcolor, darken($warningcolor, 7.5%), darken($warningcolor, 10%), lignten($warningcolor, 5%), lighten($warningcolor, 10%), darken($warningcolor, 30%));
+}
+.btn-ouline-warning {
+  @include button-outline-variant($warningcolor, #8C6A08, lighten($warningcolor,5%), $warningcolor);
+}
 
 // body {
 //   height: 100%;
@@ -9,13 +16,13 @@
 // }
 
 
-// body {
-//   overflow-x: hidden;
-//   font-family: 'Lato', sans-serif;
-//   color: #505962;
-//   height: 100%;
-//   /* background-color: #F3F3EB; */
-// }
+body {
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  color: #505962;
+  height: 100%;
+  /* background-color: #F3F3EB; */
+}
 
 /* Nav Scrolling Offset */
 .offset:before {
@@ -215,4 +222,25 @@ h3.heading {
 }
 .dark h3, .dark p {
   color: #DDC096;
+}
+
+/* Sign up/in pages */
+.sign-up {
+  background: #ba8b02; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ba8b02, #181818);
+  background: linear-gradient(to right, #ba8b02, #181818);
+  background-size: cover;
+  height: 100vh;
+}
+.sign-up-card {
+  align-items: center;
+  width: 35rem;
+  height: 45rem;
+}
+.login-title {
+  color: #8C6A08;
+}
+.btn-outline-gold {
+  color: #8C6A08;
+  border-color: #8C6A08;
 }

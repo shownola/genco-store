@@ -1,0 +1,29 @@
+<h1>All Products</h1>
+
+<div id="portfolio" class="offset">
+  <div class="row padding">
+    <div class="col-12 os-animation" data-animation="fadeInUp">
+      <h3 class="heading">Products</h3>
+      <div class="heading-underline"></div>
+    </div>
+  </div> <!-- End Row -->
+  <!-- Start Portfolio Grid -->
+  <div class="container-fluid">
+    <div class="row no-padding">
+
+      <% @products.all.each do |product| %>
+      <div class="col-sm-6 col-md-3">
+        <div class="os-animation" data-animation="bounceInLeft" data-delay=".2s">
+          <div class="portfolio-item">
+            <%= link_to product do %>
+              <%= image_tag(product.image.url, size: '400x400') if product.image? %>
+            <% end %>
+            <a href="img/portfolio/oil.jpg" data-lightbox="example-set" data-title="My Portfolio Image Description">
+              <img src="img/portfolio/oil.jpg" alt="oil" class="example-image">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>

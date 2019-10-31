@@ -5,9 +5,18 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"><span class="custom-toggler-icon"><i class="fas fa-bars"></i></span></button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
+
+        <% if user_signed_in? %>
+          <li class="nav-item"><%= current_user.email class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %></li>
+        <% else %>
+          <li class="nav-item"><%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'Login', new_user_session_path, class: 'nav-link' %></li>
+        <% end %>
+
         <li class="nav-item"><%= link_to 'home', root_path, class: 'nav-link' %></li>
         <li class="nav-item"><%= link_to 'features', features_path, class: 'nav-link' %></li>
-        <li class="nav-item"><%= link_to 'portfolio', portfolio_path, class: 'nav-link' %></li>
+        <li class="nav-item"><%= link_to 'products', products_path, class: 'nav-link' %></li>
         <li class="nav-item"><%= link_to 'pricing', pricing_path, class: 'nav-link' %></li>
         <li class="nav-item"><%= link_to 'team', team_path, class: 'nav-link' %></li>
         <li class="nav-item"><%= link_to 'skills', skills_path, class: 'nav-link' %></li>

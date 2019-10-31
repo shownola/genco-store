@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
   </head>
 
    <body data-spy="scroll" data-target="#navbarResponsive">
@@ -20,14 +21,22 @@
   <body>
 
 
+    
+
     <%= render 'layouts/navigation' %>
 
 
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
 
     <%= yield %>
 
 
 
-
+  <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
   </body>
 </html>

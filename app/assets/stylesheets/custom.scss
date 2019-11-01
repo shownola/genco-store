@@ -149,15 +149,15 @@ body {
   color: #F3F3EB;
 }
 .btn-secondary {
-  border-color: #89833C;
-  background-color: #89833C;
-  color: #F3F3EB;
+  border-color: #89833C!important;
+  background-color: #89833C!important;
+  color: #F3F3EB!important;
 }
 .btn-secondary:hover,
 .btn-secondary:focus {
-    border-color: #E69656;
-    background-color: #E69656;
-    color: #F3F3EB;
+    border-color: #E69656!important;
+    background-color: #E69656!important;
+    color: #F3F3EB!important;
 }
 .btn-tan {
     border-color: #DDC096;
@@ -225,13 +225,34 @@ h3.heading {
 }
 
 /* Sign up/in pages */
+
+
 .sign-up {
-  background: #ba8b02; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ba8b02, #181818);
-  background: linear-gradient(to right, #ba8b02, #181818);
-  background-size: cover;
-  height: 100vh;
+  background-color: #756213;
+background-image: -webkit-linear-gradient(bottom right, #756213 0%, #000000 74%);
+background-image: -o-linear-gradient(bottom right, #756213 0%, #000000 74%);
+background-image: linear-gradient(to top left, #756213 0%, #000000 74%);
+background-size: cover;
+height: 100vh;
+
 }
+// .sign-up {
+//   background-color: #a55c1b;
+// background-image: -webkit-linear-gradient(bottom right, #a55c1b 0%, #000000 74%);
+// background-image: -o-linear-gradient(bottom right, #a55c1b 0%, #000000 74%);
+// background-image: linear-gradient(to top left, #a55c1b 0%, #000000 74%);
+// background-size: cover;
+// height: 100vh;
+// }
+// .sign-up {
+//   background-color: #ffeaa7;
+// background-image: -webkit-linear-gradient(bottom right, #ffeaa7 0%, #000000 74%);
+// background-image: -o-linear-gradient(bottom right, #ffeaa7 0%, #000000 74%);
+// background-image: linear-gradient(to top left, #ffeaa7 0%, #000000 74%);
+// background-size: cover;
+// height: 100vh;
+// }
+
 .sign-up-card {
   align-items: center;
   width: 35rem;
@@ -243,4 +264,68 @@ h3.heading {
 .btn-outline-gold {
   color: #8C6A08;
   border-color: #8C6A08;
+}
+
+/* CONTACT / FOOTER SECTION */
+
+// #contact {
+//   padding-top: 35px;
+// }
+footer {
+  background: url('vito4.jpg')no-repeat;
+  background-size: cover;
+  color: white;
+}
+footer .row {
+  background-color: rgba(57, 63, 70, 0.85);
+  padding: 1rem 2rem 3rem;
+}
+footer img {
+  height: 2rem;
+  margin: 1.5rem 0;
+}
+footer a {
+  color: white;
+}
+footer svg.svg-inline--fa {
+  font-size: 1.6rem;
+  margin: 1.2rem .5rem 0 0;
+  color: #E5A384!important;
+}
+footer svg.svg-inline--fa:hover {
+  color: #E69656!important;
+}
+footer span {
+  color: #E69656;
+}
+footer h3 {
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+/*-- Contact Form --*/
+.form-group {
+  margin-bottom: 1.3rem;
+}
+.form-control {
+  background-color: #53595f;
+  border-radius: 0;
+  border: .15rem solid #666b71;
+  color: white!important;
+  font-size: 1.1rem;
+}
+.form-control:focus {
+  background: #59595f;
+  border: .15rem solid #666b71;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #b2b5b8!important;
+}
+input.btn {
+  cursor: pointer;
+}
+hr.socket {
+  border-top: .2rem solid #666b71;
+  width: 100%;
 }

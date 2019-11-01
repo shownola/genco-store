@@ -329,3 +329,18 @@ hr.socket {
   border-top: .2rem solid #666b71;
   width: 100%;
 }
+
+/* PRODUCTS */
+.product-container {
+  padding-top: 10rem;
+}
+.product-container .display-3 {
+  color: #89833C;
+}
+.cancel {
+  color: #89833C;
+  padding-bottom: 10rem;
+  &:hover {
+    color: #E5A384;
+  }
+}

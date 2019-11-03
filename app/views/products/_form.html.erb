@@ -1,4 +1,46 @@
-<form>
+
+
+<%= form_for(@product) do |f| %>
+  <%= render 'shared/errors', object: @product %>
+<div class="row">
+  <div class="col-md-10">
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control', placeholder: 'Enter name of product' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: 'form-control', rows: 5, placeholder: 'Enter product description' %>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= f.label :image %>
+          <%= f.file_field :image, class: 'btn' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :price %>
+          <%= f.text_field :price %>
+        </div>
+        <div class="form-group">
+          <%= f.label :cost %>
+          <%= f.text_field :cost %>
+        </div>
+      </div>
+
+      <div class="form-group col-md-offset-2 col-md-10">
+        <%= f.submit class: 'btn btn-secondary btn-block' %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<% end %>
+
+<!-- <form>
   <div class="row">
     <div class="form-group col-md-12">
       <%= form_for @product, html: {class: 'form-horizontal', multipart: true, role: 'form'} do |f| %>
@@ -6,14 +48,14 @@
           <%= f.label :name %>
         </div>
         <div class="col-md-10">
-          <%= f.text_field :name, class: 'form-control', placeholder: 'name of product', autofocus: true %>
+          <%= f.text_field :name, class: 'form-control', placeholder: 'name of product' %>
         </div>
 
         <div class="control-label col-md-2">
           <%= f.label :description %>
         </div>
         <div class="col-md-10">
-          <%= f.text_area :name, class: 'form-control', rows: "5", placeholder: 'description of product', autofocus: true %>
+          <%= f.text_area :name, class: 'form-control', rows: "5", placeholder: 'description of product' %>
         </div>
         <div class="form-row">
           <div class="form-group col-md-4">
@@ -38,7 +80,7 @@
     </div>
   </div>
 
-</form>
+</form> -->
 <div class="row justify-content-center">
   [ <%= link_to 'Cancel request and return to products', products_path, class: 'cancel px-2' %> ]
 </div>

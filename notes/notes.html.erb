@@ -9,3 +9,21 @@ background: linear-gradient(to right, #181818, #BA8B02); /* W3C, IE 10+/ Edge, F
 background: #ba8b02; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ba8b02, #181818); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ba8b02, #181818);
+
+
+  <% @products.all.each do |product| %>
+  <div class="col-sm-6 col-md-3">
+    <div class="os-animation" data-animation="bounceInLeft" data-delay=".2s">
+      <div class="portfolio-item">
+        <%= link_to product do %>
+          <%= image_tag(product.image.url) if product.image? %>
+        <% end %>
+        <a href="img/portfolio/oil.jpg" data-lightbox="example-set" data-title="My Portfolio Image Description">
+          <img src="img/portfolio/oil.jpg" alt="oil" class="example-image">
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <% end %>
+  </div>

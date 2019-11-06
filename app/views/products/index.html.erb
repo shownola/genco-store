@@ -1,29 +1,43 @@
-<h1>All Products</h1>
 
-<div id="portfolio" class="offset">
+
+<div id="portfolio" id="product" class="offset">
   <div class="row padding">
     <div class="col-12 os-animation" data-animation="fadeInUp">
       <h3 class="heading">Products</h3>
       <div class="heading-underline"></div>
     </div>
   </div> <!-- End Row -->
-  <!-- Start Portfolio Grid -->
+</div>
+  <!-- Start Product Grid -->
   <div class="container-fluid">
     <div class="row no-padding">
-
-      <% @products.all.each do |product| %>
+      <% @products.each do |product| %>
       <div class="col-sm-6 col-md-3">
         <div class="os-animation" data-animation="bounceInLeft" data-delay=".2s">
-          <div class="portfolio-item">
-            <%= link_to product do %>
-              <%= image_tag(product.image.url, size: '400x400') if product.image? %>
-            <% end %>
-            <a href="img/portfolio/oil.jpg" data-lightbox="example-set" data-title="My Portfolio Image Description">
-              <img src="img/portfolio/oil.jpg" alt="oil" class="example-image">
-            </a>
+          <div class="portfolio-item image_wrapper">
+              <%= link_to product do %>
+                <%= image_tag(product.image.url, alt: 'image', size: '424x424', class: 'example-image') if product.image? %>
+              <% end %>
+            </div>
+            <div class="row">
+              <h4>
+                <%= link_to truncate(product.name, length: 20), product, class: 'title-link' %>
+              </h4>
+            </div>
           </div>
         </div>
+            <% end %>
       </div>
     </div>
-    <% end %>
-  </div>
+
+
+  <!-- End Portfolio Grid -->
+      <div class="os-animation" data-animation="fadeInUp">
+        <div class="narrow text-center">
+          <div class="col-12">
+            <p class="lead">Genco Pura Olive Oil Company was a front company formed by Vito Corleone in the 1920s. It was named after his childhood friend and consigliere, Genco Abbandando. Genco Abbandando was the first consigliere of the Corleone family, and a childhood friend of Vito Corleone.</p>
+            <a href="#contact" class="btn btn-turquoise btn-sm">Get In Touch</a>
+          </div>
+
+        </div>
+      </div>

@@ -307,13 +307,13 @@ footer h3 {
 .form-group {
   margin-bottom: 1.3rem;
 }
-.form-control {
-  background-color: #53595f;
-  border-radius: 0;
-  border: .15rem solid #666b71;
-  color: white!important;
-  font-size: 1.1rem;
-}
+// .form-control {
+//   background-color: #53595f;
+//   border-radius: 0;
+//   border: .15rem solid #666b71;
+//   color: white!important;
+//   font-size: 1.1rem;
+// }
 .form-control:focus {
   background: #59595f;
   border: .15rem solid #666b71;
@@ -331,6 +331,9 @@ hr.socket {
 }
 
 /* PRODUCTS */
+#product {
+  margin-top: 25rem;
+}
 .product-container {
   padding-top: 10rem;
 }
@@ -343,4 +346,41 @@ hr.socket {
   &:hover {
     color: #E5A384;
   }
+}
+.prod-title {
+  padding-bottom: 2rem;
+}
+.price {
+  padding-left: 3rem;
+}
+.prod-description p {
+  box-sizing: border-box;
+  display: block;
+  padding-right: 5rem;
+}
+.title-link {
+  font-size: 16px;
+  text-align: center;
+}
+/* PORTFOLIO SECTION */
+.row.padding {
+  padding: 5rem 0 1rem;
+}
+img.example-image {
+  max-width: 100%;
+  /* height: 100%; */
+}
+.row.no-padding [class*=col-] {
+  padding:0;
+}
+.portfolio-item img:hover {
+  transform: scale(1.3);
+  cursor: zoom-in;
+}
+.portfolio-item img {
+  transition: transform .4s ease;
+  width: 100%;
+}
+.portfolio-item {
+  overflow: hidden;
 }

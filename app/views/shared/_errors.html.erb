@@ -1,7 +1,7 @@
-<% if object.errors.any? %>
+<% if obj.errors.any? %>
   <h3>The following errors occurred:</h3>
   <ul>
-    <% object.errors.full_messages.each do |message| %>
+    <% obj.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   </ul>

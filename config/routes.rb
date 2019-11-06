@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'features', to: 'pages#features'
   get 'contact', to: 'pages#contact'
 
-  get 'portfolio', to: 'pages#portfolio'
+  get 'products', to: 'products#index'
   get 'pricing', to: 'pages#pricing'
   get 'team', to: 'pages#team'
   get 'skills', to: 'pages#skills'

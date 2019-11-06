@@ -1,10 +1,27 @@
-<div class="content-container">
-  <div class="col-md-6 layout-image">
-    <%= image_tag(@product.image.url, alt: 'image') if @product.image? %>
-  </div>
-  <div class="col-md-6 layout-right">
-    <div class="prod-title">
-      <h1 class="display-3"><%= @product.name %></h1>
+<div class="content-container my-5 py-5 px-4">
+  <div class="row">
+    <div class="col-md-7 layout-image">
+      <%= image_tag(@product.image.url, alt: 'image', size: '600x700', class: 'mx-auto d-block') if @product.image? %>
     </div>
+    <div class="col-md-5 layout-right pr-5 mr-0">
+      <div class="prod-title">
+        <h1 class="display-5 mx-auto"><%= @product.name %></h1>
+      </div>
+      <div class="price d-flex flex-column flex-sm-row align-items-sm-center mb-4 justify-content-sm-between">
+        <ul class="list-inline mb-2 mb-sm-0">
+          <li class="list-inline-item h4 mb-0">$<%= @product.price %></li>
+        </ul>
+      </div>
+      <div class="prod-description">
+        <p class="mx-auto d-block justify-text-center text-muted"><%= @product.description %></p>
+      </div>
+
+      <div class="prod-use">
+        <h4>Use for: </h4>
+        <p class="mx0auto d-block justify-text-center text-muted"><%= @product.uses %></p>
+      </div>
+    </div>
+
+    <%= link_to 'Edit Product', edit_product_path(@product) %>
   </div>
 </div>

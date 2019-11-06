@@ -13,10 +13,13 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.save
       flash[:notice] = 'You have successfully created a new product'
-      redirect_to product_path(@product)
+      redirect_to @product
     else
-      render new
+      render :new
     end
+  end
+
+  def show
   end
 
   def edit
@@ -28,11 +31,11 @@ class ProductsController < ApplicationController
       redirect_to products_path(@product)
     else
       flash[:danger] = 'There was an error updating this product'
-      render edit
+      render :edit
     end
   end
 
-  def deestroy
+  def destroy
     @product.destroy
     redirect_to products_path, notice: 'You have deleted this product'
   end
@@ -42,7 +45,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :price, :cost, :image)
+    params.require(:product).permit(:name, :description, :price, :cost, :image, :uses)
   end
 
   def set_product

@@ -16,7 +16,7 @@
 
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
+
 //= require_tree .
 
 
@@ -56,24 +56,24 @@ $(document).ready(function(){
 
 /* SMOOTH SCROLLING TO LINKS */
 
-$(document).on('turbolinks:load', function(){
-  $("a").on("click", function(event) {
-    if(this.hash !== ""){
-      event.preventDefault();
-      var hash = this.hash;
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        window.location.hash = hash;
-      });
-    } // End of if statement
-  });
-})
+// $(document).on('turbolinks:load', function(){
+//   $("a").on("click", function(event) {
+//     if(this.hash !== ""){
+//       event.preventDefault();
+//       var hash = this.hash;
+//       $('html, body').animate({
+//         scrollTop: $(hash).offset().top
+//       }, 800, function(){
+//         window.location.hash = hash;
+//       });
+//     } // End of if statement
+//   });
+// })
 
 $(document).ready(function(){
   $("a").on("click", function(event) {
     if(this.hash !== ""){
-      event.preventDefault();
+      // event.preventDefault();
       var hash = this.hash;
       $('html, body').animate({
         scrollTop: $(hash).offset().top

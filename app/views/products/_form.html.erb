@@ -1,6 +1,6 @@
 <%= render 'shared/errors', obj: @product %>
 
-<%= form_for(@product) do |f| %>
+<%= form_for(@product), html: { multipart: true } do |f| %>
 
 <div class="row">
   <div class="col-md-10">

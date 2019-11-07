@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
 
     mount_uploader :image
+    # serialize :image, JSON  # If using SQLite
+    belongs_to :user, optional: true
 
   validates :name, :price, :cost, presence: true
   validates :description, presence: true, length: {minimum: 5, maximum: 1500, too_long: "%{count} characters allowed" }

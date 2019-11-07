@@ -5,7 +5,7 @@
     </div>
     <div class="col-md-5 layout-right pr-5 mr-0">
       <div class="prod-title">
-        <h1 class="display-5 mx-auto"><%= @product.name %></h1>
+        <h1 class="display-4 mx-auto"><%= @product.name %></h1>
       </div>
       <div class="price d-flex flex-column flex-sm-row align-items-sm-center mb-4 justify-content-sm-between">
         <ul class="list-inline mb-2 mb-sm-0">
@@ -22,6 +22,6 @@
       </div>
     </div>
 
-    <%= link_to 'Edit Product', edit_product_path(@product) %>
+    <%= link_to 'Edit Product', edit_product_path(@product), class: 'edit-link' %>
   </div>
 </div>

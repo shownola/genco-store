@@ -349,6 +349,7 @@ hr.socket {
 }
 .prod-title {
   padding-bottom: 2rem;
+  color: #89833C;
 }
 .price {
   padding-left: 3rem;
@@ -383,4 +384,11 @@ img.example-image {
 }
 .portfolio-item {
   overflow: hidden;
+}
+
+/* PRODUCT SHOW PAGE */
+.edit-link {
+  color: #89833C;
+  font-weight: 500;
+  font-size: 18px;
 }

@@ -362,6 +362,10 @@ hr.socket {
 .title-link {
   font-size: 16px;
   text-align: center;
+  color: #89833C;
+}
+.title-link:hover {
+  color: #E8854E;
 }
 /* PORTFOLIO SECTION */
 .row.padding {
@@ -391,4 +395,81 @@ img.example-image {
   color: #89833C;
   font-weight: 500;
   font-size: 18px;
+  &:hover {
+    color: #E8854E;
+  }
+}
+.layout-image {
+  -moz-box-shadow:    5px 5px 15px 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 5px 5px 15px 6px rgba(0,0,0,0.3);
+  box-shadow:         5px 5px 15px 6px rgba(0,0,0,0.3);
+}
+.image_wrapper {
+  box-shadow:         5px 5px 15px 6px rgba(0,0,0,0.3);
+}
+.delete-product {
+  color: #E8854E;
+  &:hover {
+    color: #89833C;
+  }
+}
+input.btn-add-to-cart {
+  background-color: #89833C;
+  color: white;
+}
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+/* Pulse */
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }

@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="keep-shopping text-right">
+    <%= link_to 'Keep Shopping', products_path, class: 'btn' %>
+  </div>
+
+  <hr />
+
+  <section class="section">
+    <%= render(@cart.line_items) %>
+
+    <div class="columns">
+      <div class="column">
+        <div class="row button-g">
+          <%= link_to 'Keep Shopping', products_path, class: 'btn' %>
+          <%= button_to 'Empty Cart', @cart, method: :delete, data: {Confirm: 'Are you sure you want to remove all items?'}, class: 'btn' %>
+          <%= button_to 'Checkout', "#", class: 'btn' %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="column total d-flex justify-content-end text-right">
+    <h5 class="title col-md-4">
+      <span>Subtotal: </span><%= number_to_currency(@cart.total_price) %>
+    </h5>
+  </div>
+
+  <div class="column total d-flex justify-content-end text-right">
+    <h5 class="title col-md-4">
+      <span>Shipping: </span><%= number_to_currency(@cart.shipping) %>
+    </h5>
+  </div>
+
+  <div class="column total d-flex justify-content-end text-right">
+    <h5 class="title col-md-4">
+      <span>Total: </span><%= number_to_currency(@cart.final_price) %>
+    </h5>
+  </div>
+
+</div>

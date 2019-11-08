@@ -19,6 +19,12 @@
 
 //= require_tree .
 
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.alert').fadeOut();
+  }, 3000);
+})
+
 
 
 /* NAVBAR TRANSPARENT TO SOLID */

@@ -21,6 +21,9 @@
         <p class="mx0auto d-block justify-text-center text-muted"><%= @product.uses %></p>
       </div>
 
+
+      
+
       <div class="add-to-cart">
         <%= button_to 'Add to Cart', line_items_path(product_id: @product), class: 'btn btn-lg hvr-grow hvr-pulse btn-add-to-cart' %>
       </div>

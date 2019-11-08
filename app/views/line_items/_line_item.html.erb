@@ -11,7 +11,7 @@
     </div>
 
     <div class="column col-md-6">
-      <strong><%= line_item.product.name %></strong>
+      <strong><%= link_to line_item.product.name, product_url %></strong>
       <div class="columns align-items-center">
         <div class="content column col-md-9">
           <%= truncate(line_item.product.description, length: 140) %>

@@ -7,7 +7,7 @@
       <ul class="navbar-nav ml-auto">
 
         <% if user_signed_in? %>
-          <li class="nav-item"><%= current_user.email class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to current_user.email, edit_user_registration_path, class: 'nav-link' %></li>
           <li class="nav-item"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %></li>
         <% else %>
           <li class="nav-item"><%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %></li>
@@ -15,10 +15,21 @@
         <% end %>
 
         <li class="nav-item"><%= link_to 'home', root_path, class: 'nav-link' %></li>
-        
+
         <li class="nav-item"><%= link_to 'products', products_path, class: 'nav-link' %></li>
 
         <li class="nav-item"><%= link_to 'contact', contact_path, class: 'nav-link' %></li>
+
+        <% if cart_has_items %>
+          <li class="nav-item">
+            <%= link_to cart_path(@cart), class: 'nav-link' do %>
+            <span class="icon">
+              <i class="fa fa-shopping-cart"></i>
+            </span> Cart
+            <%= cart_count_over_one %>
+            <% end %>
+          </li>
+        <% end %>
 
       </ul>
     </div>

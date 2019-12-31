@@ -30,6 +30,7 @@ gem "font-awesome-rails"
 gem 'devise'
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick', '~> 4.9', '>= 4.9.4'
+gem 'stripe'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

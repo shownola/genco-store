@@ -28,7 +28,7 @@ gem 'jquery-rails'
 gem 'animate-css-rails'
 gem "font-awesome-rails"
 gem 'devise'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'mini_magick', '~> 4.9', '>= 4.9.4'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
